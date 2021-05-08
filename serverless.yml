@@ -1,0 +1,16 @@
+service: autograder
+
+plugins:
+  - serverless-offline
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  runAll:
+    handler: index.runAll
+
